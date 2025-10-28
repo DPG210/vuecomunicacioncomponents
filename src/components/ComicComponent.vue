@@ -1,7 +1,8 @@
 <template>
-    <div style="margin:auto;  background-color: gray; justify-content: center; text-align: center;">
+    <div >
         <h3 style="color:blue;">{{ comic.titulo }}</h3>
         <button @click="seleccionarFavorito()">Seleccionar favorito</button>
+        <button @click="deleteComic()" class="rojo">Delete comic</button>
         <p>{{ comic.descripcion }}</p>
         <img :src="comic.imagen"/>
         <h4 :class="{
@@ -15,13 +16,16 @@
 <script>
     export default{
         name:"ComicComponent",
-        props:["comic"],
+        props:["comic", "index"],
         methods:{
             seleccionarFavorito(){
                 console.log(this.comic)
                 this.$emit("elegirFavorito",this.comic)
+            },
+            deleteComic(){
+                this.$emit("deleteComic",this.index)
             }
-        }
+        },
     }
 </script>
 
