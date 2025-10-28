@@ -22,7 +22,7 @@
             <img :src="favorito.imagen"/>
             <h4>Year: {{ favorito.year }}</h4>
         </div>
-        <div id="comics" v-for="(comic,index) in comics" :key="comic" style="justify-content: center; margin: auto;">
+        <div id="comics" v-for="(comic,index) in comics" :key="comic">
             <ComicComponent :comic="comic" :index="index"
             v-on:elegirFavorito="elegirFavorito"
             v-on:deleteComic="deleteComic">
