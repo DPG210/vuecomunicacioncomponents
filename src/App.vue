@@ -1,15 +1,16 @@
 <template>
-  <NumerosPadre></NumerosPadre>
+  <ComicsComponent></ComicsComponent>
 </template>
 
 <script>
-import NumerosPadre from './components/NumerosPadre.vue';
+import ComicsComponent from './components/ComicsComponent.vue';
+
 
 
 export default {
   name: 'App',
   components: {
-    NumerosPadre
+    ComicsComponent
   }
 }
 </script>
