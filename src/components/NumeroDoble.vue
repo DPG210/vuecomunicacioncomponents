@@ -3,6 +3,7 @@
         <h1>Numero doble</h1>
         <h2>{{ mensaje }}</h2>
         <h2>El doble es {{ doble }}</h2>
+        <button @click="redirectToHome()">Home</button>
     </div>
 </template>
 
@@ -13,6 +14,11 @@
             return{
                 mensaje:"",
                 doble:0
+            }
+        },
+        methods:{
+            redirectToHome(){
+                this.$router.push("/");
             }
         },
         mounted(){
