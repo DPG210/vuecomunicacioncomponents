@@ -1,16 +1,17 @@
 <template>
-  <SumaCheckbox></SumaCheckbox>
+  <MenuComponents></MenuComponents>
+  <router-view></router-view>
 </template>
 
 <script>
-import SumaCheckbox from './components/SumaCheckbox.vue';
+import MenuComponents from './components/MenuComponents.vue';
 
 
 
 export default {
   name: 'App',
   components: {
-    SumaCheckbox
+    MenuComponents
   }
 }
 </script>
